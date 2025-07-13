@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff; /* Warna latar belakang tetap */
+  font-family: initial;
+  line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo h1 {
+  color: #e0a537;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #e0a537;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Halaman utama */
+#home {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #e0a537;
+  color: #ffffff;
+}
+
+/* Highlight Section */
+#highlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background: white;
+  align-items: center;
+}
+
+.highlight-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.highlight-text {
+  flex: 3;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Tengah vertikal */
+  align-items: flex-start; /* Kiri (atau pakai center jika mau rata tengah) */
+  padding: 1rem;
+  color: #e0a537;
+}
+
+.highlight-image {
+  flex: 1;
+}
+
+.highlight-image img {
+  max-width: 70%;
+  border-radius: 12px;
+}
+
+/* Produk Section */
+#produk {
+  padding: 2rem;
+  background-color: #e0a537;
+  color: #f1f1f1;
+}
+
+.produk {
+  color: #e0a537;
+}
+
+#produk h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.produk-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.produk {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produk img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.produk h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.produk p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Produk Actions di bawah */
+.produk-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.beli-btn,
+.tambah-keranjang-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.beli-btn {
+  background-color: #e0a537;
+  color: #ffffff;
+}
+
+.beli-btn:hover {
+  background-color: #eb0d8e;
+  color: #ffffff;
+}
+
+.tambah-keranjang-btn {
+  background-color: #e0a537;
+  color: #ffffff;
+}
+
+.tambah-keranjang-btn:hover {
+  background-color: #eb0d8e;
+  color: #ffffff;
+}
+
+/* Info & Kontak */
+#Info,
+#kontak,
+#keranjang {
+  padding: 2rem;
+  background: #ffffff;
+  color: #e0a537;
+}
+
+#kontak form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+#kontak input,
+#kontak textarea,
+#kontak button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#kontak button {
+  background-color: #e0a537;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#kontak button:hover {
+  background-color: #ffffff;
+  color: #e0a537;
+}
+
+/* Keranjang */
+#keranjang-list {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #ffffff;
+  color: #e0a537;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Floating Icons */
+.floating-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.floating-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgb(194, 66, 66);
+  transition: transform 0.3s;
+}
+
+.floating-icon:hover {
+  transform: scale(1.1);
+}
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px #eb0d8e;
+}
+
+/* Scroll-fix supaya konten tidak ketutupan header sticky */
+#home,
+#produk,
+#Info,
+#kontak,
+#keranjang {
+  scroll-margin-top: 85px; /* sesuaikan dengan tinggi header */
+}
+@media (max-width: 768px) {
+  /* HEADER tetap sejajar (row) pada layar tablet */
+  .main-header {
+    flex-direction: row; /* jangan column, supaya tetap sejajar */
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  /* Menu navbar tetap horizontal */
+  .navbar ul {
+    flex-direction: row; /* tidak vertical */
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0; /* hilangkan jarak atas */
+  }
+}
+
+@media (max-width: 320px) {
+  /* HEADER tetap sejajar pada layar HP kecil */
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Ukuran font logo dikecilkan untuk muat di layar kecil */
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  /* Menu tetap horizontal meskipun sempit */
+  .navbar ul {
+    flex-direction: row;
+    gap: 0.25rem;
+    margin-top: 0;
+  }
+}
